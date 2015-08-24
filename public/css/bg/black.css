@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Diverso CSS v1.0 by Angelo Mazzilli */
+/* http://themeforest.net/user/AngeloM */
+
+#about, #services, #portfolio, #blog, #contact {
+	background: #666;
+}
