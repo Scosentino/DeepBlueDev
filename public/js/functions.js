@@ -58,12 +58,12 @@ $(document).ready(function () {
     .mouseover(function () {
     $(this).siblings().css({
       opacity: 0.25
-    })
+    });
   })
     .mouseout(function () {
     $(this).siblings().css({
       opacity: 1
-    })
+    });
   });
 
   /* --- Active Filter Menu --- */
