@@ -75,8 +75,8 @@ $(document).ready(function () {
 
   /* --- Google Map --- */
   var mapOptions = {
-    center: new google.maps.LatLng(40.751126,-73.993399),
-    zoom: 15,
+    center: new google.maps.LatLng(25.75000,-80.197996),
+    zoom: 12,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   var map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions);
@@ -89,3 +89,7 @@ $(document).ready(function () {
   });
 
 });
+
+
+
+
