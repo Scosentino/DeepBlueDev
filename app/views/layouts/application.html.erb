@@ -9,6 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
 
+
 <!-- Stylesheet -->
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" />
@@ -26,9 +27,12 @@
 <link rel="stylesheet" type="text/css" href="css/color/yellow.css" id="swap-color" />
 </head>
 <body>
-<div id="mobileHide">
+<% if browser.mobile? == false %>
 <%= yield %>
-</div>
+<% else %> 
+<h1>Hello</h1>
+<% end %>
+
 <script type="text/javascript" src="js/jquery-1.10.0.min.js"></script> 
 <script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script> 
