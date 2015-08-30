@@ -83,7 +83,7 @@ span.lead {
 }
 .btn {
 	padding: 5px 10px;
-	background: #FFF;
+	/*background: #FFF;*/
 	border: none;
 	border-radius: 0;
 	box-shadow: none;
