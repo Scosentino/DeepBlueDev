@@ -5,6 +5,11 @@
 /* http://themeforest.net/user/AngeloM */
 
 /* Typography */
+#need_bigger {
+	font-size:7em;
+}
+
+
 html {
 	background: url(../img/menu-panel-bg.jpg) repeat;
 	overflow: hidden;
