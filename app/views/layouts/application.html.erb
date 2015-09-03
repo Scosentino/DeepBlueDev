@@ -34,12 +34,12 @@
 </head>
 <body>
 	
-<% if browser.mobile? == false %>
-<%= yield %>
-<% else %> 
-<%= render "mobile_layout" %>
-<% end %>
+<%# if browser.mobile? == false %>
 
+<%# else %> 
+<%#= render "mobile_layout" %>
+<%# end %>
+<%= yield %>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
