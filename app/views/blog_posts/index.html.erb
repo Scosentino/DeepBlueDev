@@ -1,0 +1,60 @@
+<%#= link_to 'Edit', edit_blog_post_path(blog_post) %>
+<%#= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%#= link_to 'New Blog post', new_blog_post_path %>
+
+
+<!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('http://ironsummitmedia.github.io/startbootstrap-clean-blog/img/home-bg.jpg')">
+        <div class="container">
+            <div class="row"><p id="notice"><%= notice %></p>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Listing Blogs</h1>
+                        <hr class="small">
+                        <span class="subheading">We speak Web Development, and so should you!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-preview">
+                    <% @blog_posts.each do |blog_post| %>
+                        <h2 class="post-title">
+                            <%= blog_post.title %>
+                        </h2>
+                        <h3 class="post-subtitle">
+                            <%= blog_post.description %>
+                            <br>
+                            <%= link_to 'Show', blog_post %>
+                        </h3>
+                    <p class="post-meta"><td><%= blog_post.author %></td></p>
+                </div>
+                <hr>
+
+                <% end %>
+
+
+
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#">Older Posts →</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/clean-blog.min.js"></script>
+
