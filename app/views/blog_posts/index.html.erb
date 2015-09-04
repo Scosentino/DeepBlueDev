@@ -40,13 +40,16 @@
                 <% end %>
 
 
-
+<% if @blog_posts.count > 10 %>
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
                         <a href="#">Older Posts →</a>
                     </li>
                 </ul>
+<% else %>
+
+<% end %>
             </div>
         </div>
     </div>
