@@ -1,63 +1,117 @@
-<%#= link_to 'Edit', edit_blog_post_path(blog_post) %>
-<%#= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %>
+<p id="notice"><%= notice %></p>
+<!-- Waiting for authentication -->
+        <%#= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
+        <%#= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <!-- For new post -->
 <%#= link_to 'New Blog post', new_blog_post_path %>
 
 
-<!-- Page Header -->
-    <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('http://ironsummitmedia.github.io/startbootstrap-clean-blog/img/home-bg.jpg')">
-        <div class="container">
-            <div class="row"><p id="notice"><%= notice %></p>
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <h1>Listing Blogs</h1>
-                        <hr class="small">
-                        <span class="subheading">We speak Web Development, and so should you!</span>
+<div class="overflow_wrapper">
+     
+     <div class="full_page_photo no_photo">
+          <div class="container">
+               <div class="hgroup">
+                    <div class="hgroup_title animated bounceInUp skincolored">
+                         <div class="container">
+                              <h1>We write about Web Development and other things that interest us.</h1>
+                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </header>
+                    <div class="hgroup_subtitle animated bounceInUp ">
+                         <div class="container">
+                              <p>Be sure to check our blog daily <strong>and subscribe to our mailing list.</strong></p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="main">
+          <div class="container triangles-of-section">
+               <div class="triangle-up-left"></div>
+               <div class="square-left"></div>
+               <div class="triangle-up-right"></div>
+               <div class="square-right"></div>
+          </div>
+          <section class="with_right_sidebar">
+               <div class="container">
+                    <div class="row">
+                         <div id="leftcol" class="col-sm-8 col-md-8">
+                          <% @blog_posts.each do |blog_post| %>
+                              <article class="post">
+                                   <div class="post_header">
+                                        <h3 class="post_title"><a href="<%= blog_posts_path(@blog_posts) %>"><%= blog_post.title %></a></h3>
+                                        <div class="post_sub"><i class="fa fa-clock-o"></i> March 1, 2013 <i class="fa fa-user"></i> by <strong><%= blog_post.author %></strong> </div>
+                                   </div>
+                                   <div class="post_content">
+                                        <figure><a href="single_post.html"><img alt="0" src="images/portfolio/p3.jpg"></a></figure>
+                                        <p><%= blog_post.description %></p>
+                                       <%= link_to 'Read more', blog_post %>
+                                     </div>
+                              </article>
+                              <% end %>
+                           
+                            <!--   <div class="pagination_wrapper">
+                                   <ul class="pagination pagination-centered">
+                                        <li class="disabled"><a href="#">«</a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">»</a></li>
+                                   </ul>
+                              </div> -->
+                         </div>
+                       <!--   <div id="sidebar" class="col-sm-4 col-md-4">
+                              <aside class="widget">
+                                   <h4>Text Widget</h4>
+                                   <p>Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets.</p>
+                              </aside>
+                              <aside class="widget ads clearfix">
+                                   <h4>Ads</h4>
+                                   <a href="#"><img src="http://placehold.it/110" alt=""></a> <a href="#"><img src="http://placehold.it/110" alt=""></a> <a href="#"><img src="http://placehold.it/110" alt=""></a> </aside>
+                              <aside class="widget">
+                                   <h4>Tabs</h4>
+                                   <ul class="nav nav-tabs" id="myTab">
+                                        <li class="active"><a data-toggle="tab" href="#recent">Recent</a></li>
+                                        <li class=""><a data-toggle="tab" href="#tags">Tags</a></li>
+                                   </ul>
+                                   <div class="tab-content" id="myTabContent">
+                                        <div id="recent" class="tab-pane fade active in">
+                                             <ul class="media-list">
+                                                  <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t5.jpg)"></a> <a href="#" class="media-date">19<span>FEB</span></a>
+                                                       <h5 class="media-heading"><a href="#">Media heading, this is a title of a news...</a></h5>
+                                                       <p>Fugiat dapibus, tellus ac cursus commodo, ut fermentum...</p>
+                                                  </li>
+                                                  <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t4.jpg)"></a> <a href="#" class="media-date">18<span>FEB</span></a>
+                                                       <h5 class="media-heading"><a href="#">Media heading, of a news item.</a></h5>
+                                                       <p>Fugiat dapibus, tellus ac cursus commodo, condime ntum nibh, ut fermentum...</p>
+                                                  </li>
+                                                  <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/b3.jpg)"></a> <a href="#" class="media-date">17<span>FEB</span></a>
+                                                       <h5 class="media-heading"><a href="#">Media heading, this is a title of a news...</a></h5>
+                                                       <p>Fugiat dapibus, tellus ac cursus commodo, ut fermentum...</p>
+                                                  </li>
+                                                  <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/b4.jpg)"></a> <a href="#" class="media-date">16<span>FEB</span></a>
+                                                       <h5 class="media-heading"><a href="#">Media heading, of a news item.</a></h5>
+                                                       <p>Fugiat dapibus, tellus ac cursus commodo, condime ntum nibh, ut fermentum...</p>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                        <div id="tags" class="tab-pane fade"> <a class="label label-default">Default</a> <a class="label label-primary">Primary</a> <a class="label label-success">Success</a> <a class="label label-warning">Warning</a> <a class="label label-danger">Danger</a> <a class="label label-info">Info</a> <a class="label label-default">Default</a> <a class="label label-success">Success</a> <a class="label label-danger">Danger</a> <a class="label label-info">Info</a> <a class="label label-default">Default</a> <a class="label label-success">Success</a> <a class="label label-success">Success</a> <a class="label label-warning">Warning</a> <a class="label label-danger">Danger</a> <a class="label label-warning">Warning</a> <a class="label label-warning">Warning</a> <a class="label label-danger">Danger</a> <a class="label label-info">Info</a> <a class="label label-inverse">Inverse</a> </div>
+                                   </div>
+                              </aside>
+                         </div> -->
+                    </div>
+               </div>
+          </section>
+          
+          <!-- TWITTER FEED SECTION -->
 
-    <!-- Main Content -->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <% @blog_posts.each do |blog_post| %>
-                        <h2 class="post-title">
-                            <%= blog_post.title %>
-                        </h2>
-                        <h3 class="post-subtitle">
-                            <%= blog_post.description %>
-                            <br>
-                            <%= link_to 'Show', blog_post %>
-                        </h3>
-                    <p class="post-meta"><td><%= blog_post.author %></td></p>
-                </div>
-                <hr>
+         
 
-                <% end %>
+         
+     </div>
+   
 
+</div>
 
-<% if @blog_posts.count > 10 %>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts →</a>
-                    </li>
-                </ul>
-<% else %>
-
-<% end %>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-    <!-- Custom Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
 

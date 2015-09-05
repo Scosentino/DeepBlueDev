@@ -1,9 +1,0 @@
-@charset "utf-8";
-/* CSS Document */
-
-/* Diverso CSS v1.0 by Angelo Mazzilli */
-/* http://themeforest.net/user/AngeloM */
-
-#about, #services, #portfolio, #blog, #contact {
-	background: url(../../img/parquet-bg.jpg) repeat;
-}

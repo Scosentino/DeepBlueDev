@@ -3,9 +3,11 @@
 one:
   title: MyString
   description: MyText
+  body: MyText
   author: MyString
 
 two:
   title: MyString
   description: MyText
+  body: MyText
   author: MyString
