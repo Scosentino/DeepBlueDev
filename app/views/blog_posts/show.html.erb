@@ -1,37 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="full_page_photo no_photo">
 
-<%#= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
-<%#= link_to 'Back', blog_posts_path %>
+</div>
 
-
-<div class="overflow_wrapper">
-     <div class="full_page_photo" style="background-image: url(images/portfolio/p3.jpg);"> </div>
-     <div class="main">
-          <div class="container triangles-of-section">
+<div class="main">
+  <div class="container triangles-of-section">
                <div class="triangle-up-left"></div>
                <div class="square-left"></div>
                <div class="triangle-up-right"></div>
                <div class="square-right"></div>
           </div>
-          <section class="with_right_sidebar">
-               <div class="container">
-                    <h2 class="section_header elegant"><%= @blog_post.title %>
-                    	<small><i class="fa fa-user"></i><%= @blog_post.author %> <a href="#post_comments"></a></small></h2>
-                    <div class="row">
-                         <div id="leftcol" class="col-sm-8 col-md-8">
-                              <article class="post">
-                                   <div class="post_content">
-                                        <p></p>
-                                        <p></p>
-                                        <blockquote>
-                                             <p><%= @blog_post.body %></p>
-                                        </blockquote>
-                                        <p></p>
-                                   </div>
-                              </article>     
-                         </div>
-                    </div>
-               </div>
-          </section>
-     </div>
+  <section>
+    <h2><%= @blog_post.title %></h2><br>
+    <h1><%= @blog_post.author %></h1><br>
+    <h1><%= @blog_post.body %></h1>
+  </section>
 </div>
+
