@@ -1,3 +1,3 @@
 class BlogPost < ActiveRecord::Base
-	validates_presence_of  :title, :description, :body, :author
+	validates_presence_of  :title, :description, :body, :author, :imagelink
 end
