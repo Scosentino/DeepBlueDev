@@ -33,7 +33,7 @@
                                         <div class="post_sub"><i class="fa fa-clock-o"><%= blog_post.created_at %></i><i class="fa fa-user"></i> by <strong><%= blog_post.author %></strong> </div>
                                    </div>
                                    <div class="post_content">
-                                        <figure><a href="/blog_posts/<%= blog_post.id %>"><img alt="0" src="<%= blog_post.imagelink %>"></a></figure>
+                                        <figure><a href="/blog_posts/<%= blog_post.id %>"><img alt="0" src="<%= blog_post.imagelink  %>"></a></figure>
                                         <p><%= blog_post.description %></p>
                                        <%= link_to 'Read more', blog_post %>
                                      </div>
@@ -42,7 +42,7 @@
                     </div>
                </div>
           </section>
-             <div class="copyright">
+               <div class="copyright">
                     <div class="container">
                          <div class="row">
                               <div class="col-sm-4 col-md-4">Copyright ©2014 all rights reserved </div>
