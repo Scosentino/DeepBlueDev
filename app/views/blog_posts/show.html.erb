@@ -10,9 +10,43 @@
                <div class="square-right"></div>
           </div>
   <section>
-    <h2><%= @blog_post.title %></h2><br>
-    <h1><%= @blog_post.author %></h1><br>
-    <h1><%= @blog_post.body %></h1>
+     <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+             <h1><%= @blog_post.title %></h1>
+               <%= link_to 'Blog', blog_posts_path, class: 'btn btn-primary float-right' %>
+
+                <!-- Author -->
+                <p class="lead">
+                    by <a href="#"><%= @blog_post.author %></a>
+                </p>
+                <hr>
+
+                <!-- Date/Time -->
+                <p><span class="glyphicon glyphicon-time"></span><%= @blog_post.created_at %></p>
+
+                <hr>
+
+                <img class="img-responsive" src="https://images.unsplash.com/photo-1414690165279-49ab0a9a7e66?q=80&fm=jpg&s=11939d4a2e9cb0c881c07ada6bd0788f" alt="">
+
+                <hr>
+
+                <p class="lead"><%= @blog_post.body %></p>
+
+                <hr>
+
+                <%= link_to 'Back', blog_posts_path, class: 'btn btn-primary' %>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
   </section>
 </div>
 

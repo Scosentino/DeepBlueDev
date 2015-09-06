@@ -14,6 +14,10 @@
  *= require_self
  */
 
+.float-right {
+	float:right;
+}
+
 .centify {
 	text-align:center;
 }
