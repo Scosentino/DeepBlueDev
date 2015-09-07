@@ -27,7 +27,7 @@
                <div class="container">
                     <div class="row">
                          <article class="post">
-                               <% @blog_posts.each do |blog_post| %>
+                               <% @blog_posts.all.order('created_at DESC').each do |blog_post| %>
                                    <div class="post_header">
                                         <h3 class="post_title"><a href="/blog_posts/<%= blog_post.id %>"><%= blog_post.title %></a></h3>
                                         <div class="post_sub"><i class="fa fa-clock-o"><%= blog_post.created_at %></i><i class="fa fa-user"></i> by <strong><%= blog_post.author %></strong> </div>
