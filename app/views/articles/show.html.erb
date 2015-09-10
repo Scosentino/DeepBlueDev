@@ -1,0 +1,76 @@
+<div class="full_page_photo no_photo">
+
+</div>
+
+<div class="main">
+  <div class="container triangles-of-section">
+               <div class="triangle-up-left"></div>
+               <div class="square-left"></div>
+               <div class="triangle-up-right"></div>
+               <div class="square-right"></div>
+          </div>
+  <section>
+     <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+             <h1><%= @article.title %></h1>
+               <%= link_to 'Blog-Index', articles_path, class: 'btn btn-primary float-right' %>
+
+                <!-- Author -->
+                <p class="lead">
+                    by <a href="#"><%= @article.author %></a>
+                </p>
+                <hr>
+
+                <!-- Date/Time -->
+                <p><span class="glyphicon glyphicon-time"></span><%= @article.created_at %></p>
+
+                <hr>
+
+                <img class="img-responsive" src="<%= @article.imagelink %>" alt="">
+
+                <hr>
+
+                <p class="lead"><%= @article.body %></p>
+
+                <hr>
+
+                <%= link_to 'Back', articles_path, class: 'btn btn-primary' %>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+  </section>
+</div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67120211-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script type="text/javascript">
+  window._pt_lt = new Date().getTime();
+  window._pt_sp_2 = [];
+  _pt_sp_2.push('setAccount,79680210');
+  var _protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  (function() {
+    var atag = document.createElement('script'); atag.type = 'text/javascript'; atag.async = true;
+    atag.src = _protocol + 'js.ptengine.com/pta.js';
+    var stag = document.createElement('script'); stag.type = 'text/javascript'; stag.async = true;
+    stag.src = _protocol + 'js.ptengine.com/pts.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(atag, s);s.parentNode.insertBefore(stag, s);
+  })();
+</script>

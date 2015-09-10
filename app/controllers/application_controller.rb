@@ -3,19 +3,20 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+
   def index
-    @blog_posts = BlogPost.all
+    @article = Article.all
   end
 
    private
     # Use callbacks to share common setup or constraints between actions.
-    def set_blog_post
-      @blog_post = BlogPost.find(params[:id])
+    def set_article
+      @article = Article.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def blog_post_params
-      params.require(:blog_post).permit(:title, :description, :author, :body)
+    def article_params
+      params.require(:article).permit(:title, :description, :author, :body, :imagelink)
     end
 end
 
