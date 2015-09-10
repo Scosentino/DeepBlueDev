@@ -41,7 +41,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /blog_posts/1.json
   def update
     respond_to do |format|
-      if @article.update(blog_post_params)
+      if @article.update(article_params)
         format.html { redirect_to @article, notice: 'Blog post was successfully updated.' }
         format.json { render :show, status: :ok, location: @article }
       else
@@ -56,19 +56,19 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to blog_posts_url, notice: 'Blog post was successfully destroyed.' }
+      format.html { redirect_to article_url, notice: 'Blog post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_blog_post
+    def set_article
       @article = Article.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def blog_post_params
-      params.require(:blog_post).permit(:title, :description, :body, :author, :imagelink)
+    def article_params
+      params.require(:article).permit(:title, :description, :body, :author, :imagelink)
     end
 end
