@@ -20,8 +20,16 @@
 	float:right;
 }
 
+#inline {
+  display:inline;
+}
+
 .centify {
 	text-align:center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 
