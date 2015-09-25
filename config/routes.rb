@@ -18,6 +18,15 @@ Rails.application.routes.draw do
 
   get '/white-label' => 'pages#white-label'
 
+  get '/seo' => 'pages#seo'
+
+  get '/which-one' => 'pages#which-one'
+
+  get 'web-apps' => 'pages#web-apps'
+
+  get '/websites' => 'pages#websites'
+
+  get '/portfolio-dbd' => 'pages#portfolio-dbd'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
