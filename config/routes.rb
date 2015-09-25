@@ -10,7 +10,14 @@ Rails.application.routes.draw do
 
   get '/services' => 'pages#services'
 
-  get 'portfolio' => 'pages#portfolio'
+  get '/portfolio' => 'pages#portfolio'
+
+  get '/aboutus' => 'pages#aboutus'
+
+  get '/partnerships' => 'pages#partnerships'
+
+  get '/white-label' => 'pages#white-label'
+
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
