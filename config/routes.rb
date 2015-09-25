@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :articles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  root 'pages#index'
+  root 'pages#homepage'
 
   get '/contact' => 'pages#contact'
 
@@ -10,7 +10,23 @@ Rails.application.routes.draw do
 
   get '/services' => 'pages#services'
 
-  get 'portfolio' => 'pages#portfolio'
+  get '/portfolio' => 'pages#portfolio'
+
+  get '/aboutus' => 'pages#aboutus'
+
+  get '/partnerships' => 'pages#partnerships'
+
+  get '/white-label' => 'pages#white-label'
+
+  get '/seo' => 'pages#seo'
+
+  get '/which-one' => 'pages#which-one'
+
+  get 'web-apps' => 'pages#web-apps'
+
+  get '/websites' => 'pages#websites'
+
+  get '/portfolio-dbd' => 'pages#portfolio-dbd'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
