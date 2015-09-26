@@ -2,7 +2,7 @@
 /* CSS Document */
 
 
-body,
+body, 
 html{
 	font-family:'Raleway', Helvetica, sans-serif;
 	font-weight:300;
@@ -183,8 +183,8 @@ blockquote p{
 	margin-bottom:10px;
 	letter-spacing:normal;
 }
-blockquote .small,
-blockquote footer,
+blockquote .small, 
+blockquote footer, 
 blockquote small{
 	font-size:11px;
 }
@@ -223,8 +223,8 @@ blockquote.style3.pull-right:before{
 	right:5px;
 	left:auto;
 }
-blockquote,
-.blockquote-reverse,
+blockquote, 
+.blockquote-reverse, 
 blockquote.pull-right{
 	border-width:3px;
 }
