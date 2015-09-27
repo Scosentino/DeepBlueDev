@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get '/portfolio-dbd' => 'pages#portfolio-dbd'
 
+
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
