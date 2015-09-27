@@ -13,78 +13,29 @@
   </div>
 </section>
 
-<div class="content">
-
-  <!-- section START -->
-    <section class="section gray-bg">
+<section class="featured-posts">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <div class="cbp-panel">
-              <!-- <div id="filters-container" class="cbp-l-filters-dropdown">
 
-                  <div class="cbp-l-filters-dropdownWrap">
-                    <div class="cbp-l-filters-dropdownHeader">Sort Posts</div>
-                    <div class="cbp-l-filters-dropdownList">
-                      <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
-                        All (<div class="cbp-filter-counter"></div> posts)
-                      </div>
-                      <div data-filter=".technology" class="cbp-filter-item">
-                        Technology (<div class="cbp-filter-counter"></div> posts)
-                      </div>
-                      <div data-filter=".lifestyle" class="cbp-filter-item">
-                        Lifestyle (<div class="cbp-filter-counter"></div> posts)
-                      </div>
-                      <div data-filter=".videos" class="cbp-filter-item">
-                        Videos (<div class="cbp-filter-counter"></div> posts)
-                      </div>
-                      <div data-filter=".links" class="cbp-filter-item">
-                        Links (<div class="cbp-filter-counter"></div> posts)
-                      </div>
-                      <div data-filter=".quotes" class="cbp-filter-item">
-                        Quotes (<div class="cbp-filter-counter"></div> posts)
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="cbp-search cbp-l-filters-right">
-                    <input id="js-search-blog-posts" type="text" placeholder="Search by title" data-search=".cbp-l-grid-blog-title" class="cbp-search-input">
-                    <div class="cbp-search-icon"></div>
-                  </div>
-
-                </div> -->
+            <h1 class="strong">Keep up with us</h1>
+            <div class="cbp cbp-slider-edge featured-slider">
               <% @articles.all.order('created_at DESC').each do |blog_post| %>
-              <div  class="cbp blog-masonry blog-masonry-2col">
-               <div class="cbp-item technology">
-                  <div class="thumbnail style1 post-md">
-                    <div class="thumb-wrapper">
-
-                      <img src="img/blog/large/1.jpg" alt="Thumbnail">
-                      <a href="javascript:void(0);" class="post-author" data-toggle="tooltip" title="Author Name"><img src="logo_small.png" alt="Post Author"></a>
+              <div class="cbp-item">
+                <a href="articles/<%= blog_post.id %>" title="Read full post">
+                  <div class="featured-post" data-path="<%= blog_post.imagelink %>" style="background: url(img/blog/large/1.jpg);">
+                    <div class="post-content">
+                      <p class="label label-warning post-category"></p>
+                      <h3 class="post-title"><%= blog_post.title%></h3>
                     </div>
-                    <div class="caption">
-                      <h3><a href="javascript:void(0);" class="post-title cbp-l-grid-blog-title" title="post title"><%= blog_post.title%></a></h3>
-                      <div class="post-meta">
-                        <span class="post-category">Technology</span>
-                        <span class="post-date"><%= blog_post.created_at %></span>
+                    <div class="post-meta">
+                      <span class="post-date"><%= blog_post.created_at %></span>
 
-                      </div>
-                      <p><%= blog_post.description %></p>
-                      <a href="articles/<%= blog_post.id  %>" class="btn btn-primary btn-sm" title="Thumbnail link">Read More</a>
                     </div>
                   </div>
-                </div>
-              </div>
-              <% end %>
-
-              <div id="loadMore-container" class="cbp-l-loadMore-button">
-                <a href="cubeportfolio/ajax/masonry-blog/loadMore.html" class="cbp-l-loadMore-link">
-                  <span class="cbp-l-loadMore-defaultText">LOAD MORE</span>
-                  <span class="cbp-l-loadMore-loadingText">LOADING...</span>
-                  <span class="cbp-l-loadMore-noMoreLoading">NO MORE POSTS</span>
                 </a>
               </div>
-
+              <% end %>
             </div>
           </div>
         </div>
@@ -94,6 +45,8 @@
 
 
 
+
+              <%#= blog_post.description %>
 
 
 
