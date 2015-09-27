@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+gem 'google-tag-manager-rails'
+
 gem 'bcrypt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
