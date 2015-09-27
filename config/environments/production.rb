@@ -3,7 +3,7 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-  GoogleTagManager.gtm_id = "GTM-TLN8H3"
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
@@ -23,7 +23,7 @@ Rails.application.configure do
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
-
+  GoogleTagManager.gtm_id = "GTM-TLN8H3"
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
