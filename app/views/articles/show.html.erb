@@ -1,54 +1,129 @@
-<div class="full_page_photo no_photo">
 
-</div>
 
-<div class="main">
-  <div class="container triangles-of-section">
-               <div class="triangle-up-left"></div>
-               <div class="square-left"></div>
-               <div class="triangle-up-right"></div>
-               <div class="square-right"></div>
-          </div>
-  <section>
-     <div class="container">
-
+<section class="section" id="scrollTo">
+      <div class="container">
         <div class="row">
+          <div class="col-md-9 col-sm-8">
 
-            <!-- Blog Post Content Column -->
-            <div class="col-lg-8">
-             <h1><%= @article.title %></h1>
-               <%= link_to 'Blog-Index', articles_path, class: 'btn btn-primary float-right' %>
+            <!-- single post START -->
+            <div class="single-post style1">
 
-                <!-- Author -->
-                <p class="lead">
-                    by <a href="#"><%= @article.author %></a>
-                </p>
-                <hr>
+              <div class="thumb-wrapper">
+                <!-- <div class="thumbs-carousel">
+                    <img src="<%#= @article.imagelink %>" alt="Thumbnail">
+                </div> -->
+                <%= image_tag(@article.imagelink) %>
+                <a href="javascript:void(0);" class="post-author" data-toggle="tooltip" title="<%= @article.author %>">
 
-                <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span><%= @article.created_at %></p>
-
-                <hr>
-
-                <img class="img-responsive" src="<%= @article.imagelink %>" alt="">
-
-                <hr>
-
-                <p class="lead"><%= raw @article.body %></p>
-
-                <hr>
-
-                <%= link_to 'Back', articles_path, class: 'btn btn-primary' %>
+              </div>
 
 
+              <h2 class="h1 post-title"><%= @article.title %></h2>
+              <div class="post-meta">
+                <span class="post-category">Technology</span>
+                <span class="post-date"><%= @article.created_at %></span>
+
+              </div>
+              <%#= @article.imagelink %>
+
+              <h4><%=  @article.body %></h4>
+              <%= link_to 'Back', articles_path, class: 'btn btn-primary' %>
 
             </div>
+            <!-- single post END -->
+
+
+            <!-- next/previous posts START -->
+            <!-- <div class="row">
+              <div class="col-md-6">
+                <h4 class="next-prev-posts">
+                  <small>Previous Post</small>
+                  <a href="javascript:void(0);" title="Trends in technology are about to change">Trends in technology are about to change</a>
+                </h4>
+              </div>
+              <div class="col-md-6">
+                <h4 class="next-prev-posts text-right">
+                  <small>Next Post</small>
+                  <a href="javascript:void(0);" title="Initial wireframes of my first web design">Lorem ipsum dolor sitam consectetur adipiscing elit.</a>
+                </h4>
+              </div>
+            </div> -->
+            <!-- next/previous posts END -->
+
+            <!-- author box START -->
+           <!--  <section class="author-box">
+              <h5 class="page-header">About Author</h5>
+              <div class="media">
+                <div class="media-left">
+                  <a href="profile.html" title="Cole Martin">
+                    <img src="img/authors/author3.jpg" class="media-object" alt="Cole Martin">
+                  </a>
+                  <a href="profile.html" class="btn btn-default profile-btn" data-toggle="tooltip" title="View author profile">View Profile</a>
+                </div>
+                <div class="media-body">
+
+                  <h4 class="media-heading">Mr. Cole Martin </h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique mauris quis nisi elementum suscipit gerat. Integer luctus a nunc eu rhoncus. Integer mollis ante a consequat condimentum etiam etmi magna.</p>
+                  <p class="small"><strong>Contributions:</strong> <a href="javascript:void(0);" title="All posts by Cole">456</a></p>
+                  <div class="author-social" data-toggle="tooltip" data-original-title="Author's social profiles">
+                    <i class="fa fa-share-alt"></i>
+                    <ul class="social">
+                      <li>
+                        <a href="javascript:void(0);" title="facebook">
+                          <i class="livicon" data-name="facebook" data-hovercolor="#333" data-size="18" data-onparent="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);" title="twitter">
+                          <i class="livicon" data-name="twitter" data-hovercolor="#333" data-size="18" data-onparent="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);" title="linkedin">
+                          <i class="livicon" data-name="linkedin" data-hovercolor="#333" data-size="18" data-onparent="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);" title="pinterest">
+                          <i class="livicon" data-name="pinterest" data-hovercolor="#333" data-size="18" data-onparent="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);" title="dribbble">
+                          <i class="livicon" data-name="dribbble" data-hovercolor="#333" data-size="18" data-onparent="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);" title="reddit">
+                          <i class="livicon" data-name="reddit" data-hovercolor="#333" data-size="18" data-onparent="true"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);" title="skype">
+                          <i class="livicon" data-name="skype" data-hovercolor="#333" data-size="18" data-onparent="true"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section> -->
+            <!-- author box END -->
+
+
+
+
+
+
+
         </div>
-    </div>
+      </div>
+    </section>
 
 
-  </section>
-</div>
+
+
+
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

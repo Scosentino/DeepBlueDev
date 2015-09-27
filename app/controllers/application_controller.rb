@@ -4,9 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
 
-  def index
-    @article = Article.all
-  end
+
 
    private
     # Use callbacks to share common setup or constraints between actions.

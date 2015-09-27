@@ -196,19 +196,19 @@ $(window).load(function() {
 	$(function(){
 		if ($(".navbar").offset().top > 50) {
 			$(".navbar-fixed-top").addClass("top-nav-collapse");
-			$('.transparent-nav .navbar-brand img').attr('src','logo.png');
+			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/5xrSayX.png');
 		} else {
 			$(".navbar-fixed-top").removeClass("top-nav-collapse");
-			$('.transparent-nav .navbar-brand img').attr('src','logo.png');
+			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/5xrSayX.png');
 		}
 	});
 	$(window).scroll(function() {
 		if ($(".navbar").offset().top > 50) {
 			$(".navbar-fixed-top").addClass("top-nav-collapse");
-			$('.transparent-nav .navbar-brand img').attr('src','logo.png');
+			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/5xrSayX.png');
 		} else {
 			$(".navbar-fixed-top").removeClass("top-nav-collapse");
-			$('.transparent-nav .navbar-brand img').attr('src','logo.png');
+			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/5xrSayX.png');
 		}
 	});
 
