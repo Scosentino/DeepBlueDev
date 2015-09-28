@@ -196,19 +196,19 @@ $(window).load(function() {
 	$(function(){
 		if ($(".navbar").offset().top > 50) {
 			$(".navbar-fixed-top").addClass("top-nav-collapse");
-			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/jzcej1u.png');
+			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/gPB8Jtl.png');
 		} else {
 			$(".navbar-fixed-top").removeClass("top-nav-collapse");
-			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/jzcej1u.png');
+			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/gPB8Jtl.png');
 		}
 	});
 	$(window).scroll(function() {
 		if ($(".navbar").offset().top > 50) {
 			$(".navbar-fixed-top").addClass("top-nav-collapse");
-			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/jzcej1u.png');
+			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/gPB8Jtl.png');
 		} else {
 			$(".navbar-fixed-top").removeClass("top-nav-collapse");
-			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/jzcej1u.png');
+			$('.transparent-nav .navbar-brand img').attr('src','http://i.imgur.com/gPB8Jtl.png');
 		}
 	});
 
