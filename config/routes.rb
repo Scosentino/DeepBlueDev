@@ -6,14 +6,6 @@ Rails.application.routes.draw do
 
   get '/' => 'pages#homepage'
 
-  get '/contact' => 'pages#contact'
-
-  get '/about' => 'pages#about'
-
-  get '/services' => 'pages#services'
-
-  get '/portfolio' => 'pages#portfolio'
-
   get '/aboutus' => 'pages#aboutus'
 
   get '/partnerships' => 'pages#partnerships'

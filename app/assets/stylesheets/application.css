@@ -29,3 +29,13 @@
 @import url("theme.css");
 @import url("color.css");
 
+
+/* Custom Style*/
+
+#gen_contact_modal_body {
+	height: 50em;
+}
+
+#newsletter_modal_body {
+	height:40em;
+}
