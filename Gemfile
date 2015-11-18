@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'sitemap_generator'
 gem 'google-tag-manager-rails'
 
 gem 'bcrypt'
