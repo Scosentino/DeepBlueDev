@@ -1,6 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  GoogleTagManager.gtm_id = "GTM-TLN8H3"
+  # GoogleTagManager.gtm_id = "GTM-TLN8H3"
+  
   # Code is not reloaded between requests.
   config.cache_classes = true
 
