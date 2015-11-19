@@ -24,4 +24,13 @@ SitemapGenerator::Sitemap.create do
   #   Article.find_each do |article|
   #     add article_path(article), :lastmod => article.updated_at
   #   end
+  add '/portfolio-dbd'
+  add '/seo'
+  add '/mobile-first'
+  add 'partnerships'
+  add '/process'
+  add '/aboutus'
+  add '/web-apps'
+  add '/websites'
+  add '/white-label'
 end
