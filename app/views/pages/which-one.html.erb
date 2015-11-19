@@ -1,9 +1,13 @@
 <!-- Meta tags -->
-<meta property="og:url"         content="http://www.deepbluedev.co/which-one" />
-<meta property="og:type"        content="website" />
-<meta property="og:title"       content="Your Mobile-First Web Heroes" />
-<meta property="og:description" content="Deep Blue Dev can handle all your web needs and presence. Websites, Web applications, Search engine and Mobile Optimization." />
-<meta property="og:image"       content="http://i.imgur.com/jzcej1u.png" />
+<% set_meta_tags title: "DeepBlueDev",
+                 description: 'Being responsive isn\'t an add on, at Deep Blue its a default. Google\'s updated search algorithm warrants new standards and Deep Blue wants your business to stand out',
+								 og: {
+									 title: "Your Mobile-First Web Heroes",
+									 type: 'website',
+									 url: "http://www.deepbluedev.co/which-one",
+									 description:"Deep Blue Dev can handle all your web needs and presence. Websites, Web applications, Search engine and Mobile Optimization.",
+									 image: "http://i.imgur.com/jzcej1u.png"
+									 }%>
 
 <script type="text/javascript">
 /* <![CDATA[ */
@@ -12,8 +16,10 @@ var google_custom_params = window.google_tag_params;
 var google_remarketing_only = true;
 /* ]]> */
 </script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
+<div style="display:none;">
+	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+	</script>
+</div>
 <noscript>
 <div style="display:inline;">
 <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/951296410/?value=0&amp;guid=ON&amp;script=0"/>
