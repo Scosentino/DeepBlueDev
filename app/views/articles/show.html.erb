@@ -8,6 +8,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TLN8H3');</script>
 <!-- End Google Tag Manager -->
 
+<!-- Meta tags -->
+<% set_meta_tags title: "#{@article.title}",
+                 description: "#{@article.body.truncate_words(20)}",
+								 og: {
+									 title: "Your Mobile-First Web Heroes",
+									 type: 'website',
+									 url: "http://www.deepbluedev.co/articles/#{@article.id}",
+									 description:"#{@article.body.truncate_words(20)}",
+									 image: "http://i.imgur.com/jzcej1u.png"
+									 }%>
+
 <section class="section" id="scrollTo">
       <div class="container">
         <div class="row">
