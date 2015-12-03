@@ -18,7 +18,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 									 description:"#{@article.body.truncate_words(20)}",
 									 image: "http://i.imgur.com/jzcej1u.png"
 									 }%>
-
+<hr class="spacer-30">
 <section class="section" id="scrollTo">
       <div class="container">
         <div class="row">
@@ -32,7 +32,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <img src="<%#= @article.imagelink %>" alt="Thumbnail">
                 </div> -->
                 <%= image_tag(@article.imagelink) %>
-                <a href="javascript:void(0);" class="post-author" data-toggle="tooltip" title="<%= @article.author %>">
+                <a id="blogtext" href="javascript:void(0);" class="post-author" data-toggle="tooltip" title="<%= @article.author %>">
 
               </div>
 

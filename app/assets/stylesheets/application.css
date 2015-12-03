@@ -29,6 +29,9 @@
 @import url("theme.css");
 @import url("color.css");
 
+#blogtext {
+  text-decoration: none;
+}
 
 /* Custom Style*/
 /*
